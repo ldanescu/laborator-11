@@ -1,0 +1,70 @@
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+template <class T>
+class Stack
+{
+    vector<T> vec;
+
+    public:
+        bool empty();
+        void push(const T item);
+        T top();
+        void pop();
+        T get_elem(int n);
+        int size();
+};
+
+    template <class T>
+    bool Stack<T>::empty()
+    {
+        if (vec.size())
+            return 1;
+        return 0;
+    }
+
+    template <class T>
+    void Stack<T>::push(const T item)
+    {
+        vec.push_back(item);
+    }
+
+    template <class T>
+    T Stack<T>::top()
+    {
+        return vec.back();
+    }
+    template <class T>
+    void Stack<T>::pop()
+    {
+        vec.pop_back();
+    }
+
+    template <class T>
+    T Stack<T>::get_elem(int n)
+    {
+        return vec[n];
+    }
+
+    template <class T>
+    int Stack<T>::size()
+    {
+        return vec.size();
+    }
+
+int main()
+{
+
+Stack <char> stiva; //declara o stiva de char-uri
+stiva.push('2'); //introduce elementul 2 in stiva
+stiva.push('m'); //introduce 'm' in stiva
+std::cout<<stiva.top()<<'\n'; //afiseaza ultimul element adaugat
+std::cout<<stiva.size()<<'\n'; //afiseaza dimensiunea stivei
+stiva.pop(); //sterge ultimul element
+std::cout<<stiva.top(); //afiseaza ultimul element din stiva modificata
+return 0;
+
+}
+
