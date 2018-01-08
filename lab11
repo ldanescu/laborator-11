@@ -30,7 +30,7 @@ class Stack
     {
         vec.push_back(item);
     }
-
+//aaa
     template <class T>
     T Stack<T>::top()
     {
