@@ -18,7 +18,7 @@ class Stack
 };
 
     template <class T>
-    bool Stack<T>::empty()
+    bool Stack<T>::empty() //aici ezte facuta modificarea
     {
         if (vec.size())
             return 1;
